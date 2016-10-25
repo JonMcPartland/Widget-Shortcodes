@@ -48,11 +48,9 @@ new class {
 			return '';
 		}
 
-		$params = \shortcode_atts( [
-			'id'    => '',
-			'posts' => [],
-			'site'  => intval( \get_current_blog_id() ?? '1', 10 ),
-		], $params, 'do_widget' );
+		$defaults = \apply_filters( 'widgetshortcodes_params', [] );
+		$defaults = array_merge( [ 'id' => '', ], $defaults );
+		$params   = \shortcode_atts( $defaults, $params, 'widget' );
 
 		if ( ! isset( $GLOBALS['wp_registered_widgets'][ $params['id'] ] ) ) {
 			return '';
