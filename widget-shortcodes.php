@@ -51,7 +51,7 @@ new class {
 		$params = \shortcode_atts( [
 			'id'    => '',
 			'posts' => [],
-			'size'  => 'large',
+			'site'  => intval( \get_current_blog_id() ?? '1', 10 ),
 		], $params, 'do_widget' );
 
 		if ( ! isset( $GLOBALS['wp_registered_widgets'][ $params['id'] ] ) ) {
