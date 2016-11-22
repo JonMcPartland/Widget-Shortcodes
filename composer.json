@@ -1,7 +1,7 @@
 {
-    "name": "jonmcpartland/widget-shortcodes",
+    "name": "bigbitecreative/widget-shortcodes",
     "description": "Allows WordPress widgets to be used in content via a shortcode.",
-    "homepage": "https://github.com/JonMcPartland/Widget-Shortcodes.git",
+    "homepage": "https://github.com/bigbitecreative/widget-shortcodes.git",
     "type": "wordpress-plugin",
     "require": {
         "composer/installers": "~1.0"
